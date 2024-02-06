@@ -1,0 +1,282 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  max-width: 1365px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* similar text========== */
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+a {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #444;
+  font-size: 15px;
+}
+
+/* header start here */
+#header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  background-color: #fff;
+}
+
+header {
+  padding: 10px 0;
+}
+
+header .wrapper,
+header .navbarList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .navbar {
+  width: 50%;
+}
+
+header .navbarList a {
+  border-bottom: 2px solid transparent;
+  padding: 5px;
+}
+
+header .navbarList a:hover {
+  color: #000;
+  border-bottom: 2px solid goldenrod;
+}
+
+/* ======================mobile navbar================ */
+.mobileBtn {
+  display: none;
+  cursor: pointer;
+}
+.mobileBtnIcon{
+  font-size: 30px;
+}
+.mobileBtn .mobileBtnIcon[name="close-outline"] {
+  display: none;
+}
+
+/* header end here=================================== */
+
+/* banner start here */
+#banner,
+#video {
+  width: 100%;
+}
+
+#video {
+  /* filter: blur(1px); */
+  filter: brightness(70%) contrast(120%);
+}
+
+/* banner end here */
+
+/* about us start here======================= */
+#aboutUs {
+  padding: 100px;
+}
+/* about us end here======================= */
+
+/* diclaimer ===============start here */
+.disclaimer{
+  padding: 10px 100px;
+}
+
+.disclaimer h3,
+#aboutUs h3 {
+  font-size: 30px;
+  border-bottom: 3px solid goldenrod;
+  width: 50%;
+  line-height: 1.6;
+}
+.disclaimer p,
+#aboutUs p {
+  line-height: 1.6;
+  padding: 10px 0;
+}
+
+.disclaimer p span,
+#aboutUs p span {
+  font-weight: bold;
+}
+
+/* diclaimer ===============end here */
+
+/* footer start here========================== */
+footer {
+  background-color: #daa520;
+  padding: 15px 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+footer .wrapper,
+footer .wrapper ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .wrapper ul {
+  width: 25%;
+}
+
+footer .wrapper ul a {
+  color: #fff;
+}
+
+footer .wrapper ul a:hover {
+  color: #ff0000;
+}
+
+/* footer end here========================== */
+
+/* responsive start here */
+@media screen and (max-width: 1115px) {
+
+  header .navbar {
+    width: 80%;
+  }
+
+  #logo {
+    width: 100%;
+    /* z-index: 1; */
+  }
+  #aboutUs {
+    padding: 100px 0;
+  }
+  .disclaimer{
+    padding: 10px 0;
+  }
+
+  footer .wrapper ul {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  header {
+    position: relative;
+  }
+
+  header .navbar {
+    position: absolute;
+    width: 100%;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+.active .navbar {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  header .navbarList {
+    flex-direction: column;
+
+
+  }
+
+  header .navbarList a {
+    color: #fff;
+    margin: 10px 0;
+  }
+
+  header .navbarList a:hover {
+    color: #fff;
+  }
+
+
+
+  .mobileBtn {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .active .mobileBtn .mobileBtnIcon[name="menu-outline"] {
+    display: none;
+  }
+
+  .active .mobileBtn .mobileBtnIcon[name="close-outline"] {
+    display: flex;
+    color: #fff;
+  }
+
+  footer .wrapper ul {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .disclaimer h3,
+  #aboutUs h3 {
+    font-size: 25px;
+  }
+
+  .disclaimer p,
+  #aboutUs p {
+    font-size: 15px;
+  }
+
+  footer .wrapper,
+  footer .wrapper ul {
+    flex-direction: column;
+    line-height: 1.6;
+  }
+
+  footer .wrapper ul {
+    width: 100%;
+  }
+
+  footer .wrapper ul li:nth-child(2) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .disclaimer p,
+  #aboutUs p {
+    font-size: 12px;
+  }
+
+  footer,
+  footer .wrapper ul a {
+    font-size: 12px !important;
+    text-align: center;
+  }
+}
+
+/* responsive end here */
